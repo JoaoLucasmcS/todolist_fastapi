@@ -61,7 +61,7 @@ def test_update_user_deve_retornar_usuario_nao_encontrado(client):
             'email': 'alice.souza@teste.com',
             'password': 'senha123',
         },
-    )  # Act
+    )  
 
     assert response.status_code == HTTPStatus.NOT_FOUND
     assert response.json() == {'detail': 'user not found'}
